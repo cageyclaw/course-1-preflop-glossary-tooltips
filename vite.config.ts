@@ -6,7 +6,7 @@ import path from 'path'
 export default defineConfig({
   plugins: [react()],
   // GitHub Pages project site base path
-  base: '/course-1-preflop-midnight-rebuild/',
+  base: '/course-1-preflop-glossary-tooltips/',
   // Serve markdown content from the repo-local artifacts directory at /course-md/*.md.
   // Keep this directory synced from Company OS source-of-truth before publishing.
   publicDir: path.resolve(__dirname, 'company/projects/course-1-preflop/artifacts'),
