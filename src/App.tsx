@@ -1229,7 +1229,7 @@ function App() {
           <div className="scoreboard">
             <div className="scoreboard-copy">
               <div className="scoreboard-kicker">Scoreboard</div>
-              <div className="scoreboard-title">Midnight Fuel Gauge</div>
+              <div className="scoreboard-title">Course Achievements</div>
               <div className="scoreboard-sub">Track every chapter and drill.</div>
             </div>
             <div className="fuel-gauge" role="progressbar" aria-valuenow={progressSnapshot.completed} aria-valuemin={0} aria-valuemax={progressSnapshot.total}>
