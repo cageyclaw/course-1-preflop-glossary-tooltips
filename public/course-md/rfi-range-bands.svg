@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360">
+  <rect width="900" height="360" fill="#121624" rx="18" />
+  <text x="40" y="54" fill="#e6e6e6" font-size="22" font-family="Inter, Arial, sans-serif" font-weight="700">RFI Width by Position (Baseline)</text>
+  <text x="40" y="84" fill="#9aa3b2" font-size="14" font-family="Inter, Arial, sans-serif">Tight early, widest on the Button, disciplined in the Small Blind.</text>
+
+  <g font-family="Inter, Arial, sans-serif" font-size="14" fill="#d6d9e0">
+    <text x="70" y="140">UTG / EP</text>
+    <text x="70" y="190">HJ / MP</text>
+    <text x="70" y="240">CO</text>
+    <text x="70" y="290">BTN</text>
+    <text x="70" y="340">SB</text>
+  </g>
+
+  <g>
+    <rect x="180" y="120" width="200" height="22" rx="10" fill="#3a425c" />
+    <rect x="180" y="170" width="280" height="22" rx="10" fill="#4a67ff" />
+    <rect x="180" y="220" width="360" height="22" rx="10" fill="#6f89ff" />
+    <rect x="180" y="270" width="460" height="22" rx="10" fill="#9cb1ff" />
+    <rect x="180" y="320" width="260" height="22" rx="10" fill="#4a67ff" />
+  </g>
+
+  <g font-family="Inter, Arial, sans-serif" font-size="12" fill="#cbd2df">
+    <text x="650" y="136">Tight</text>
+    <text x="650" y="186">Tight+</text>
+    <text x="650" y="236">Medium</text>
+    <text x="650" y="286">Widest</text>
+    <text x="650" y="336">Disciplined</text>
+  </g>
+</svg>

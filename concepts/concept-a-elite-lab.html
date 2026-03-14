@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A1 · RFI Fundamentals — Elite Performance Lab</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #0B0F14;
+      color: #E8EEF6;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+    }
+    .container { max-width: 1400px; margin: 0 auto; padding: 0 24px; }
+    
+    /* Header */
+    .header {
+      background: linear-gradient(180deg, #161E2B 0%, #0B0F14 100%);
+      padding: 24px 0;
+      border-bottom: 1px solid #2A3441;
+    }
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .chapter-badge {
+      background: #2EEA7B;
+      color: #0B0F14;
+      padding: 4px 12px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+    }
+    .header-meta {
+      display: flex;
+      gap: 24px;
+      font-size: 13px;
+      color: #A8B3C4;
+    }
+    .header-meta span { display: flex; align-items: center; gap: 6px; }
+    
+    /* Hero */
+    .hero {
+      padding: 48px 0;
+      border-bottom: 1px solid #2A3441;
+    }
+    .hero h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      background: linear-gradient(135deg, #E8EEF6 0%, #A8B3C4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-subtitle {
+      font-size: 18px;
+      color: #A8B3C4;
+      max-width: 600px;
+      margin-bottom: 24px;
+    }
+    .cta-primary {
+      background: #2EEA7B;
+      color: #0B0F14;
+      border: none;
+      padding: 14px 32px;
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .cta-primary:hover { background: #25d66a; transform: translateY(-1px); }
+    
+    /* Nav */
+    .nav-rail {
+      position: fixed;
+      left: 0;
+      top: 0;
+      height: 100vh;
+      width: 240px;
+      background: #161E2B;
+      border-right: 1px solid #2A3441;
+      padding: 24px 0;
+      z-index: 100;
+    }
+    .nav-logo {
+      padding: 0 24px 24px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      color: #2EEA7B;
+    }
+    .nav-section { padding: 0 16px; margin-bottom: 24px; }
+    .nav-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #6B7A8F;
+      margin-bottom: 8px;
+      padding: 0 8px;
+    }
+    .nav-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 6px;
+      color: #A8B3C4;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .nav-item:hover { background: #1E2836; color: #E8EEF6; }
+    .nav-item.active { background: #2EEA7B20; color: #2EEA7B; }
+    .nav-progress {
+      margin-top: auto;
+      padding: 24px;
+      border-top: 1px solid #2A3441;
+    }
+    .progress-bar {
+      height: 4px;
+      background: #2A3441;
+      border-radius: 2px;
+      margin-bottom: 8px;
+    }
+    .progress-fill { height: 100%; background: #2EEA7B; border-radius: 2px; width: 8%; }
+    .progress-text { font-size: 12px; color: #6B7A8F; }
+    
+    /* Main content */
+    .main-content { margin-left: 240px; padding: 32px; }
+    
+    /* Video Module */
+    .module { margin-bottom: 32px; }
+    .module-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #6B7A8F;
+      margin-bottom: 12px;
+    }
+    .video-container {
+      background: #161E2B;
+      border-radius: 8px;
+      overflow: hidden;
+      aspect-ratio: 16/9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #2A3441;
+    }
+    .video-placeholder {
+      color: #6B7A8F;
+      font-size: 14px;
+    }
+    .video-tabs {
+      display: flex;
+      gap: 16px;
+      margin-top: 12px;
+      border-bottom: 1px solid #2A3441;
+      padding-bottom: 12px;
+    }
+    .video-tab {
+      font-size: 13px;
+      color: #6B7A8F;
+      cursor: pointer;
+      padding-bottom: 4px;
+    }
+    .video-tab.active { color: #2EEA7B; border-bottom: 2px solid #2EEA7B; }
+    
+    /* Range Station */
+    .range-station {
+      background: #161E2B;
+      border-radius: 8px;
+      border: 1px solid #2A3441;
+      padding: 24px;
+    }
+    .range-controls {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .control-group label {
+      font-size: 12px;
+      color: #6B7A8F;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .control-select {
+      background: #0B0F14;
+      border: 1px solid #2A3441;
+      color: #E8EEF6;
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-size: 13px;
+    }
+    .range-display {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 4px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+    }
+    .range-cell {
+      background: #0B0F14;
+      padding: 8px;
+      text-align: center;
+      border-radius: 4px;
+    }
+    .range-cell.open { color: #2EEA7B; }
+    .range-cell.fold { color: #6B7A8F; }
+    .range-cell.maybe { color: #E7C86B; }
+    
+    /* Key Takeaways */
+    .takeaways {
+      background: #161E2B;
+      border-radius: 8px;
+      border: 1px solid #2A3441;
+      padding: 24px;
+    }
+    .takeaways ul { list-style: none; }
+    .takeaways li {
+      padding: 12px 0;
+      border-bottom: 1px solid #2A3441;
+      display: flex;
+      gap: 12px;
+    }
+    .takeaways li:last-child { border-bottom: none; }
+    .takeaway-bullet {
+      width: 6px;
+      height: 6px;
+      background: #2EEA7B;
+      border-radius: 50%;
+      margin-top: 8px;
+      flex-shrink: 0;
+    }
+    
+    /* Next CTA */
+    .next-cta {
+      background: linear-gradient(135deg, #2EEA7B20 0%, #161E2B 100%);
+      border: 1px solid #2EEA7B40;
+      border-radius: 8px;
+      padding: 24px;
+      text-align: center;
+      margin-top: 32px;
+    }
+    .next-cta h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    .next-cta p { color: #A8B3C4; font-size: 14px; margin-bottom: 16px; }
+    
+    /* Instructor credit */
+    .instructor-credit {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid #2A3441;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 13px;
+      color: #6B7A8F;
+    }
+    .instructor-avatar {
+      width: 32px;
+      height: 32px;
+      background: #2A3441;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Rail -->
+  <nav class="nav-rail">
+    <div class="nav-logo">⬡ PPWM</div>
+    <div class="nav-section">
+      <div class="nav-label">Course 1: PreFlop</div>
+      <div class="nav-item active">A1 · RFI Fundamentals</div>
+      <div class="nav-item">A2 · 3-Bet or Defend</div>
+      <div class="nav-item">A3 · Blind Defense</div>
+    </div>
+    <div class="nav-section">
+      <div class="nav-label">Tools</div>
+      <div class="nav-item">Range Calculator</div>
+      <div class="nav-item">Drill Mode</div>
+    </div>
+    <div class="nav-progress">
+      <div class="progress-bar"><div class="progress-fill"></div></div>
+      <div class="progress-text">8% Complete</div>
+    </div>
+  </nav>
+
+  <div class="header">
+    <div class="container header-content">
+      <span class="chapter-badge">A1 · RFI FUNDAMENTALS</span>
+      <div class="header-meta">
+        <span>⏱ 18 min</span>
+        <span>📅 Updated 2026</span>
+        <span>Course 1: PreFlop</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="main-content">
+    <section class="hero">
+      <h1>RFI (Raise First In)</h1>
+      <p class="hero-subtitle">Build profitable open-raise ranges with clean sizing logic. Master position-based strategy.</p>
+      <button class="cta-primary">Continue Lesson →</button>
+    </section>
+
+    <section class="module">
+      <div class="module-label">Video Lesson</div>
+      <div class="video-container">
+        <span class="video-placeholder">[Video Player]</span>
+      </div>
+      <div class="video-tabs">
+        <span class="video-tab active">Overview</span>
+        <span class="video-tab">Transcript</span>
+        <span class="video-tab">Resources</span>
+      </div>
+    </section>
+
+    <section class="module">
+      <div class="module-label">Range Station</div>
+      <div class="range-station">
+        <div class="range-controls">
+          <div class="control-group">
+            <label>Position</label>
+            <select class="control-select">
+              <option>UTG</option>
+              <option>HJ</option>
+              <option>CO</option>
+              <option selected>BTN</option>
+              <option>SB</option>
+            </select>
+          </div>
+          <div class="control-group">
+            <label>Stack Depth</label>
+            <select class="control-select">
+              <option selected>100bb</option>
+              <option>50bb</option>
+              <option>200bb</option>
+            </select>
+          </div>
+        </div>
+        <div class="range-display">
+          <div class="range-cell open">AA</div>
+          <div class="range-cell open">KK</div>
+          <div class="range-cell open">QQ</div>
+          <div class="range-cell open">JJ</div>
+          <div class="range-cell open">TT</div>
+          <div class="range-cell open">99</div>
+          <div class="range-cell open">AKo</div>
+          <div class="range-cell open">AQo</div>
+          <div class="range-cell open">KQs</div>
+          <div class="range-cell maybe">AJo</div>
+          <div class="range-cell maybe">KJs</div>
+          <div class="range-cell fold">86s</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="module">
+      <div class="module-label">Key Takeaways</div>
+      <div class="takeaways">
+        <ul>
+          <li><span class="takeaway-bullet"></span>Tight early, wide late — position is your main dial</li>
+          <li><span class="takeaway-bullet"></span>Learn the bottom of your range, not every hand</li>
+          <li><span class="takeaway-bullet"></span>Consistent sizing keeps you unexploitable</li>
+          <li><span class="takeaway-bullet"></span>Your range must be defendable vs 3-bets</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="next-cta">
+      <h3>Next: A2 — 3-Bet or Defend</h3>
+      <p>Learn when to re-raise and when to call against open-raises.</p>
+      <button class="cta-primary">Continue to A2</button>
+    </div>
+
+    <div class="instructor-credit">
+      <div class="instructor-avatar"></div>
+      <span>John Tokar · PPWM Founder</span>
+    </div>
+  </main>
+</body>
+</html>

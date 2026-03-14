@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="320" viewBox="0 0 900 320">
+  <rect width="900" height="320" fill="#131826" rx="18" />
+  <text x="40" y="54" fill="#e6e6e6" font-size="22" font-family="Inter, Arial, sans-serif" font-weight="700">Open Size Consistency</text>
+  <text x="40" y="82" fill="#9aa3b2" font-size="14" font-family="Inter, Arial, sans-serif">Same size for the whole range keeps your strategy unreadable.</text>
+
+  <g font-family="Inter, Arial, sans-serif" font-size="14" fill="#d6d9e0">
+    <text x="60" y="150">All hands</text>
+    <text x="60" y="230">Default</text>
+  </g>
+
+  <rect x="170" y="130" width="640" height="26" rx="13" fill="#2b3148" />
+  <rect x="170" y="130" width="640" height="26" rx="13" fill="#4a67ff" opacity="0.55" />
+
+  <rect x="170" y="210" width="260" height="26" rx="13" fill="#2b3148" />
+  <rect x="170" y="210" width="260" height="26" rx="13" fill="#7aa2ff" />
+  <text x="450" y="229" fill="#e6e6e6" font-size="16" font-family="Inter, Arial, sans-serif" font-weight="700">2.5x</text>
+
+  <text x="170" y="275" fill="#9aa3b2" font-size="12" font-family="Inter, Arial, sans-serif">Adjust only for table texture, not hand strength.</text>
+</svg>

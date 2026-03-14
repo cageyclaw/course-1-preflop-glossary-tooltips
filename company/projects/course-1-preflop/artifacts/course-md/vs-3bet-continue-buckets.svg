@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="320" viewBox="0 0 900 320">
+  <rect width="900" height="320" fill="#131826" rx="18" />
+  <text x="40" y="54" fill="#e6e6e6" font-size="22" font-family="Inter, Arial, sans-serif" font-weight="700">Continue Buckets vs 3-Bets</text>
+  <text x="40" y="82" fill="#9aa3b2" font-size="14" font-family="Inter, Arial, sans-serif">Hands that play well vs tight ranges survive. The rest fold.</text>
+
+  <rect x="60" y="120" width="240" height="140" rx="14" fill="#1b2132" stroke="#2a3046" />
+  <rect x="330" y="120" width="240" height="140" rx="14" fill="#1b2132" stroke="#2a3046" />
+  <rect x="600" y="120" width="240" height="140" rx="14" fill="#1b2132" stroke="#2a3046" />
+
+  <text x="90" y="150" fill="#e6e6e6" font-size="15" font-family="Inter, Arial, sans-serif" font-weight="700">Call IP</text>
+  <text x="360" y="150" fill="#e6e6e6" font-size="15" font-family="Inter, Arial, sans-serif" font-weight="700">4-Bet</text>
+  <text x="640" y="150" fill="#e6e6e6" font-size="15" font-family="Inter, Arial, sans-serif" font-weight="700">Fold</text>
+
+  <g font-family="Inter, Arial, sans-serif" font-size="12" fill="#cbd2df">
+    <text x="90" y="178">KQs, QJs, JTs</text>
+    <text x="90" y="198">A5s–A2s</text>
+    <text x="90" y="218">Pairs (IP)</text>
+
+    <text x="360" y="178">AA–QQ, AK</text>
+    <text x="360" y="198">Bluff blockers</text>
+
+    <text x="640" y="178">Offsuit junk</text>
+    <text x="640" y="198">Dominated broadways</text>
+  </g>
+</svg>

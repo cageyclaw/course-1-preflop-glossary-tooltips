@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="200" viewBox="0 0 820 200" role="img" aria-label="Stack depth impact">
+  <rect width="820" height="200" fill="#0f172a" rx="16" />
+  <text x="32" y="38" fill="#e2e8f0" font-size="20" font-family="Inter, Arial, sans-serif" font-weight="600">Stack depth shifts hand value</text>
+  <rect x="60" y="80" width="700" height="14" rx="7" fill="#1e293b" />
+  <rect x="60" y="80" width="220" height="14" rx="7" fill="#f97316" />
+  <rect x="280" y="80" width="260" height="14" rx="7" fill="#22c55e" />
+  <rect x="540" y="80" width="220" height="14" rx="7" fill="#38bdf8" />
+  <g font-family="Inter, Arial, sans-serif" font-size="13" fill="#e2e8f0">
+    <text x="60" y="120">Shallow (&lt;40bb): top pair + broadways</text>
+    <text x="280" y="140">Medium (40–100bb): balanced ranges</text>
+    <text x="540" y="160">Deep (100bb+): implied odds + disguise</text>
+  </g>
+</svg>

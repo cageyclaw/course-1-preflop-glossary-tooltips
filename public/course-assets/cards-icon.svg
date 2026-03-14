@@ -1,0 +1,15 @@
+<svg width="160" height="120" viewBox="0 0 160 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(42 8) rotate(-10 38 52)">
+    <rect x="8" y="8" width="76" height="104" rx="12" fill="#F8FAFC"/>
+    <rect x="14" y="14" width="64" height="92" rx="10" stroke="#CBD5E1" stroke-width="2"/>
+    <text x="22" y="34" fill="#E11D48" font-size="22" font-family="Inter, Arial, sans-serif" font-weight="700">A</text>
+    <path d="M47 44C39 55 31 63 31 73C31 84 39 92 47 98C55 92 63 84 63 73C63 63 55 55 47 44Z" fill="#E11D48"/>
+  </g>
+  <g transform="translate(60 14) rotate(9 38 52)">
+    <rect x="8" y="8" width="76" height="104" rx="12" fill="#F8FAFC"/>
+    <rect x="14" y="14" width="64" height="92" rx="10" stroke="#CBD5E1" stroke-width="2"/>
+    <text x="22" y="34" fill="#111827" font-size="22" font-family="Inter, Arial, sans-serif" font-weight="700">K</text>
+    <path d="M47 49C55 37 63 28 71 18C79 28 87 37 95 49C84 54 76 61 72 69C70 73 69 77 67 81C65 77 64 73 62 69C58 61 50 54 39 49Z" transform="translate(-20 10)" fill="#111827"/>
+    <rect x="43" y="76" width="8" height="20" fill="#111827"/>
+  </g>
+</svg>

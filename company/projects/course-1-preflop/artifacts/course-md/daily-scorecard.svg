@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300">
+  <rect width="900" height="300" fill="#131826" rx="18" />
+  <text x="40" y="54" fill="#e6e6e6" font-size="22" font-family="Inter, Arial, sans-serif" font-weight="700">Daily Scorecard Template</text>
+  <text x="40" y="82" fill="#9aa3b2" font-size="14" font-family="Inter, Arial, sans-serif">Track one spot, one rule, one improvement.</text>
+
+  <rect x="60" y="120" width="780" height="140" rx="12" fill="#1b2132" stroke="#2a3046" />
+  <g font-family="Inter, Arial, sans-serif" font-size="13" fill="#cbd2df">
+    <text x="90" y="155">Spot trained:</text>
+    <text x="90" y="185">Accuracy %:</text>
+    <text x="90" y="215">Biggest 3 mistakes:</text>
+    <text x="90" y="245">One rule for next session:</text>
+  </g>
+</svg>

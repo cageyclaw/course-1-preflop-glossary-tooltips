@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="320" viewBox="0 0 900 320">
+  <rect width="900" height="320" fill="#121624" rx="18" />
+  <text x="40" y="54" fill="#e6e6e6" font-size="22" font-family="Inter, Arial, sans-serif" font-weight="700">ISO Target Map</text>
+  <text x="40" y="82" fill="#9aa3b2" font-size="14" font-family="Inter, Arial, sans-serif">Goal: isolate the limper and avoid the herd.</text>
+
+  <circle cx="190" cy="190" r="50" fill="#1b2132" stroke="#2a3046" />
+  <text x="160" y="196" fill="#e6e6e6" font-size="14" font-family="Inter, Arial, sans-serif">Limp</text>
+
+  <circle cx="420" cy="190" r="50" fill="#1b2132" stroke="#2a3046" />
+  <text x="392" y="196" fill="#e6e6e6" font-size="14" font-family="Inter, Arial, sans-serif">ISO</text>
+
+  <circle cx="650" cy="150" r="38" fill="#1b2132" stroke="#2a3046" />
+  <circle cx="650" cy="230" r="38" fill="#1b2132" stroke="#2a3046" />
+  <text x="620" y="156" fill="#cbd2df" font-size="12" font-family="Inter, Arial, sans-serif">Blinds</text>
+  <text x="618" y="236" fill="#cbd2df" font-size="12" font-family="Inter, Arial, sans-serif">Field</text>
+
+  <path d="M240 190 L370 190" stroke="#4a67ff" stroke-width="3" />
+  <path d="M470 190 L612 150" stroke="#2a3046" stroke-width="2" stroke-dasharray="6 6" />
+  <path d="M470 190 L612 230" stroke="#2a3046" stroke-width="2" stroke-dasharray="6 6" />
+
+  <text x="500" y="110" fill="#9aa3b2" font-size="12" font-family="Inter, Arial, sans-serif">Bigger sizing = fewer callers</text>
+</svg>

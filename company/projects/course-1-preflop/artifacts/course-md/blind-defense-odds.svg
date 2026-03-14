@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="320" viewBox="0 0 900 320">
+  <rect width="900" height="320" fill="#121624" rx="18" />
+  <text x="40" y="54" fill="#e6e6e6" font-size="22" font-family="Inter, Arial, sans-serif" font-weight="700">BB Pot Odds Snapshot</text>
+  <text x="40" y="82" fill="#9aa3b2" font-size="14" font-family="Inter, Arial, sans-serif">Facing a 2.5x open, you call 1.5bb more to win ~5.5bb.</text>
+
+  <rect x="60" y="120" width="360" height="140" rx="14" fill="#1b2132" stroke="#2a3046" />
+  <rect x="480" y="120" width="360" height="140" rx="14" fill="#1b2132" stroke="#2a3046" />
+
+  <text x="90" y="160" fill="#e6e6e6" font-size="16" font-family="Inter, Arial, sans-serif" font-weight="700">Price to call</text>
+  <text x="90" y="190" fill="#cbd2df" font-size="14" font-family="Inter, Arial, sans-serif">1.5bb</text>
+
+  <text x="510" y="160" fill="#e6e6e6" font-size="16" font-family="Inter, Arial, sans-serif" font-weight="700">Pot after call</text>
+  <text x="510" y="190" fill="#cbd2df" font-size="14" font-family="Inter, Arial, sans-serif">~5.5bb</text>
+
+  <text x="60" y="270" fill="#9aa3b2" font-size="12" font-family="Inter, Arial, sans-serif">Equity needed ≈ 27%</text>
+</svg>

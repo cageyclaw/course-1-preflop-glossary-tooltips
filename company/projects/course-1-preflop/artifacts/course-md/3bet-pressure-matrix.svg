@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360">
+  <rect width="900" height="360" fill="#131826" rx="18" />
+  <text x="40" y="54" fill="#e6e6e6" font-size="22" font-family="Inter, Arial, sans-serif" font-weight="700">3-Bet Pressure Matrix</text>
+  <text x="40" y="82" fill="#9aa3b2" font-size="14" font-family="Inter, Arial, sans-serif">Match your range to opponent tendencies.</text>
+
+  <g font-family="Inter, Arial, sans-serif" font-size="14" fill="#d6d9e0">
+    <text x="120" y="128">Calls Too Much</text>
+    <text x="560" y="128">Folds Too Much</text>
+    <text x="40" y="200" transform="rotate(-90 40 200)">You are IP</text>
+    <text x="40" y="310" transform="rotate(-90 40 310)">You are OOP</text>
+  </g>
+
+  <rect x="120" y="150" width="300" height="120" rx="12" fill="#1b2132" stroke="#2a3046" />
+  <rect x="460" y="150" width="300" height="120" rx="12" fill="#1b2132" stroke="#2a3046" />
+  <rect x="120" y="280" width="300" height="120" rx="12" fill="#1b2132" stroke="#2a3046" />
+  <rect x="460" y="280" width="300" height="120" rx="12" fill="#1b2132" stroke="#2a3046" />
+
+  <g font-family="Inter, Arial, sans-serif" font-size="13" fill="#cbd2df">
+    <text x="150" y="200">Linear + value heavy</text>
+    <text x="150" y="224">Bigger sizing OK</text>
+
+    <text x="490" y="200">Polar + bluffs</text>
+    <text x="490" y="224">Smaller sizing OK</text>
+
+    <text x="150" y="330">Tighten OOP</text>
+    <text x="150" y="354">Less bluffing</text>
+
+    <text x="490" y="330">Selective pressure</text>
+    <text x="490" y="354">Value + blockers</text>
+  </g>
+</svg>

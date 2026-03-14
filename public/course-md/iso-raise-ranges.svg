@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="420" viewBox="0 0 980 420" role="img" aria-label="ISO raising ranges vs 1 limper (online)">
+  <rect width="980" height="420" fill="#0f172a" rx="16" />
+  <text x="32" y="40" fill="#e2e8f0" font-size="20" font-family="Inter, Arial, sans-serif" font-weight="600">ISO raising ranges vs 1 limper (online cash)</text>
+  <text x="32" y="64" fill="#94a3b8" font-size="12" font-family="Inter, Arial, sans-serif">Hand-class buckets (approx. 100bb). Tighten if squeezers behind.</text>
+
+  <!-- table header -->
+  <rect x="24" y="86" width="932" height="40" rx="10" fill="#111827" />
+  <g font-family="Inter, Arial, sans-serif" font-size="13" fill="#e2e8f0" font-weight="600">
+    <text x="40" y="112">Position</text>
+    <text x="170" y="112">Pairs</text>
+    <text x="310" y="112">Broadways</text>
+    <text x="560" y="112">Suited Ax</text>
+    <text x="720" y="112">Suited connectors</text>
+  </g>
+
+  <!-- rows background -->
+  <rect x="24" y="132" width="932" height="86" rx="10" fill="#0b1224" />
+  <rect x="24" y="224" width="932" height="86" rx="10" fill="#0b1224" />
+  <rect x="24" y="316" width="932" height="86" rx="10" fill="#0b1224" />
+
+  <g font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#e2e8f0">
+    <!-- CO row -->
+    <text x="40" y="160" font-weight="600">CO</text>
+    <text x="170" y="160">99+</text>
+    <text x="310" y="152">AQo+, AQs+, KQo</text>
+    <text x="310" y="172">KQs, AJs, KJs, QJs, JTs</text>
+    <text x="560" y="160">A5s–A2s (low freq)</text>
+    <text x="720" y="152">T9s, 98s</text>
+    <text x="720" y="172">87s</text>
+
+    <!-- BTN row -->
+    <text x="40" y="252" font-weight="600">BTN</text>
+    <text x="170" y="252">66+</text>
+    <text x="310" y="244">ATo+, KJo+, KTs+</text>
+    <text x="310" y="264">QJo, QTs+, JTs</text>
+    <text x="560" y="252">A9s+, A5s–A2s</text>
+    <text x="720" y="244">T9s, 98s, 87s</text>
+    <text x="720" y="264">76s, 65s</text>
+
+    <!-- SB OOP row -->
+    <text x="40" y="344" font-weight="600">SB (OOP)</text>
+    <text x="170" y="344">99+</text>
+    <text x="310" y="336">AQo+, AQs+, KQo</text>
+    <text x="310" y="356">KQs, AJs, KJs, QJs</text>
+    <text x="560" y="344">A5s–A4s</text>
+    <text x="720" y="336">JTs, T9s</text>
+    <text x="720" y="356">98s</text>
+  </g>
+
+  <text x="32" y="404" fill="#94a3b8" font-size="11.5" font-family="Inter, Arial, sans-serif">Use smaller suited connectors OOP only vs weak limp-calling ranges; drop them if blinds 3-bet.</text>
+</svg>

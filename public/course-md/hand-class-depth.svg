@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="320" viewBox="0 0 900 320">
+  <rect width="900" height="320" fill="#121624" rx="18" />
+  <text x="40" y="54" fill="#e6e6e6" font-size="22" font-family="Inter, Arial, sans-serif" font-weight="700">Hand Class Value by Stack Depth</text>
+  <text x="40" y="82" fill="#9aa3b2" font-size="14" font-family="Inter, Arial, sans-serif">Deep stacks reward implied odds; shallow stacks reward top-pair strength.</text>
+
+  <g font-family="Inter, Arial, sans-serif" font-size="14" fill="#d6d9e0">
+    <text x="80" y="140">Broadways + big pairs</text>
+    <text x="80" y="200">Small pairs + suited connectors</text>
+  </g>
+
+  <rect x="360" y="120" width="420" height="24" rx="12" fill="#2b3148" />
+  <rect x="360" y="120" width="320" height="24" rx="12" fill="#7aa2ff" />
+
+  <rect x="360" y="180" width="420" height="24" rx="12" fill="#2b3148" />
+  <rect x="360" y="180" width="160" height="24" rx="12" fill="#4a67ff" />
+
+  <text x="360" y="250" fill="#9aa3b2" font-size="12" font-family="Inter, Arial, sans-serif">Left = shallow | Right = deep</text>
+</svg>

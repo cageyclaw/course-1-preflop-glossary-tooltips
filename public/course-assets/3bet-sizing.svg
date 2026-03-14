@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="200" viewBox="0 0 820 200" role="img" aria-label="3-bet sizing guide">
+  <rect width="820" height="200" fill="#0f172a" rx="16" />
+  <text x="32" y="38" fill="#e2e8f0" font-size="20" font-family="Inter, Arial, sans-serif" font-weight="600">3-bet sizing quick guide (100bb baseline)</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="32" y="86">In position (IP)</text>
+    <rect x="180" y="70" width="240" height="26" rx="8" fill="#22c55e" />
+    <text x="440" y="88" fill="#bbf7d0">~3x the open</text>
+
+    <text x="32" y="140">Out of position (OOP)</text>
+    <rect x="180" y="124" width="300" height="26" rx="8" fill="#f97316" />
+    <text x="500" y="142" fill="#fed7aa">~3.5x the open</text>
+  </g>
+  <text x="32" y="178" fill="#94a3b8" font-size="12" font-family="Inter, Arial, sans-serif">Keep sizes consistent across your range.</text>
+</svg>

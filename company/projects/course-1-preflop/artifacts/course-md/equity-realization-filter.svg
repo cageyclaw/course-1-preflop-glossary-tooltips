@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="340" viewBox="0 0 900 340">
+  <rect width="900" height="340" fill="#131826" rx="18" />
+  <text x="40" y="54" fill="#e6e6e6" font-size="22" font-family="Inter, Arial, sans-serif" font-weight="700">Equity Realization Filter</text>
+  <text x="40" y="82" fill="#9aa3b2" font-size="14" font-family="Inter, Arial, sans-serif">Use pot odds, then filter for playability.</text>
+
+  <rect x="60" y="120" width="250" height="160" rx="14" fill="#1b2132" stroke="#2a3046" />
+  <rect x="325" y="120" width="250" height="160" rx="14" fill="#1b2132" stroke="#2a3046" />
+  <rect x="590" y="120" width="250" height="160" rx="14" fill="#1b2132" stroke="#2a3046" />
+
+  <text x="90" y="150" fill="#e6e6e6" font-size="14" font-family="Inter, Arial, sans-serif" font-weight="700">Step 1</text>
+  <text x="90" y="175" fill="#cbd2df" font-size="13" font-family="Inter, Arial, sans-serif">Pot odds OK?</text>
+
+  <text x="355" y="150" fill="#e6e6e6" font-size="14" font-family="Inter, Arial, sans-serif" font-weight="700">Step 2</text>
+  <text x="355" y="175" fill="#cbd2df" font-size="13" font-family="Inter, Arial, sans-serif">Playable hand?</text>
+
+  <text x="620" y="150" fill="#e6e6e6" font-size="14" font-family="Inter, Arial, sans-serif" font-weight="700">Step 3</text>
+  <text x="620" y="175" fill="#cbd2df" font-size="13" font-family="Inter, Arial, sans-serif">Heads-up vs multiway</text>
+
+  <text x="90" y="220" fill="#9aa3b2" font-size="12" font-family="Inter, Arial, sans-serif">If no → fold</text>
+  <text x="355" y="220" fill="#9aa3b2" font-size="12" font-family="Inter, Arial, sans-serif">If dominated → fold</text>
+  <text x="620" y="220" fill="#9aa3b2" font-size="12" font-family="Inter, Arial, sans-serif">Multiway = tighter</text>
+</svg>

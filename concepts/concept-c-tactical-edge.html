@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A1 · RFI Fundamentals — Tactical Table Edge</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #F5F7FA;
+      --ink: #0A0F16;
+      --felt: #1F7A5A;
+      --coral: #FF4D3D;
+      --steel: #2B3645;
+      --line: #D6DEE8;
+    }
+    body {
+      background: var(--primary);
+      color: var(--ink);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    
+    /* Header */
+    .header {
+      background: #fff;
+      border-bottom: 3px solid var(--felt);
+      padding: 16px 0;
+    }
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+      font-size: 22px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--felt);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 18px;
+    }
+    .header-actions {
+      display: flex;
+      gap: 12px;
+    }
+    .btn {
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-secondary {
+      background: transparent;
+      border: 2px solid var(--steel);
+      color: var(--steel);
+    }
+    .btn-secondary:hover { background: var(--steel); color: #fff; }
+    
+    /* Hero */
+    .hero {
+      background: var(--ink);
+      color: #fff;
+      padding: 48px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, var(--felt) 0%, transparent 70%);
+      opacity: 0.3;
+    }
+    .hero-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .hero-text { position: relative; z-index: 1; }
+    .chapter-pill {
+      display: inline-block;
+      background: var(--felt);
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-family: 'Sora', sans-serif;
+      font-size: 44px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .hero p {
+      font-size: 18px;
+      color: #8899AA;
+      max-width: 500px;
+      margin-bottom: 24px;
+    }
+    .btn-primary {
+      background: var(--coral);
+      color: #fff;
+      border: none;
+      padding: 14px 32px;
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .btn-primary:hover { background: #E64437; }
+    
+    /* Table Visual */
+    .table-visual {
+      position: relative;
+      width: 280px;
+      height: 140px;
+    }
+    .poker-table {
+      width: 100%;
+      height: 100%;
+      border: 3px solid var(--felt);
+      border-radius: 140px 140px 20px 20px;
+      background: #1a2a35;
+      position: relative;
+    }
+    .position-dot {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      background: var(--felt);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-weight: 700;
+      color: #fff;
+    }
+    .position-dot.utg { top: 10px; left: 50%; transform: translateX(-50%); }
+    .position-dot.hj { top: 30px; left: 20px; }
+    .position-dot.co { top: 60px; left: 5px; }
+    .position-dot.btn { top: 80px; right: 5px; background: var(--coral); }
+    .position-dot.sb { bottom: 15px; left: 50%; transform: translateX(-50%); }
+    
+    /* Mode Tabs */
+    .mode-tabs {
+      background: #fff;
+      display: flex;
+      gap: 0;
+      border-radius: 8px;
+      overflow: hidden;
+      margin: -24px auto 32px;
+      width: fit-content;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 10;
+    }
+    .mode-tab {
+      padding: 14px 32px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      background: #fff;
+      color: var(--steel);
+      transition: all 0.2s;
+    }
+    .mode-tab:hover { background: #f5f5f5; }
+    .mode-tab.active {
+      background: var(--felt);
+      color: #fff;
+    }
+    
+    /* Main Content */
+    .content { padding: 32px 0 64px; }
+    
+    /* Video */
+    .video-section {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .video-container {
+      aspect-ratio: 16/9;
+      background: #1a1a1a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+    }
+    .lesson-meta {
+      display: flex;
+      gap: 24px;
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--line);
+    }
+    .lesson-meta span {
+      font-size: 13px;
+      color: var(--steel);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    
+    /* Range Module */
+    .range-module {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 24px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .range-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .range-header h3 {
+      font-family: 'Sora', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .range-selector {
+      display: flex;
+      gap: 8px;
+    }
+    .position-btn {
+      padding: 8px 16px;
+      border: 2px solid var(--line);
+      background: #fff;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .position-btn:hover { border-color: var(--felt); }
+    .position-btn.active {
+      background: var(--felt);
+      border-color: var(--felt);
+      color: #fff;
+    }
+    .position-btn.coral.active {
+      background: var(--coral);
+      border-color: var(--coral);
+    }
+    
+    .range-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 6px;
+    }
+    .range-cell {
+      padding: 12px 8px;
+      text-align: center;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    .range-cell.open { background: #E8F5F3; color: var(--felt); }
+    .range-cell.maybe { background: #FFF3E0; color: #E65100; }
+    .range-cell.fold { background: #F5F7FA; color: #8899AA; }
+    
+    /* Quick Rules */
+    .rules-section {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .rule-card {
+      background: #fff;
+      border-left: 4px solid var(--felt);
+      padding: 16px;
+      border-radius: 0 8px 8px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .rule-card.coral { border-left-color: var(--coral); }
+    .rule-card h4 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #8899AA;
+      margin-bottom: 6px;
+    }
+    .rule-card p { font-size: 14px; font-weight: 500; }
+    
+    /* CTA */
+    .next-lesson {
+      background: linear-gradient(135deg, var(--felt) 0%, #155A45 100%);
+      color: #fff;
+      border-radius: 12px;
+      padding: 32px;
+      margin-top: 32px;
+      text-align: center;
+    }
+    .next-lesson h3 {
+      font-family: 'Sora', sans-serif;
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+    .next-lesson p {
+      opacity: 0.9;
+      margin-bottom: 20px;
+    }
+    .next-lesson .btn-primary {
+      background: #fff;
+      color: var(--felt);
+    }
+    
+    /* Footer */
+    .instructor {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 2px solid var(--line);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .instructor-avatar {
+      width: 48px;
+      height: 48px;
+      background: var(--steel);
+      border-radius: 50%;
+    }
+    .instructor-info h4 {
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .instructor-info span {
+      font-size: 13px;
+      color: #8899AA;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-content">
+      <div class="logo">
+        <div class="logo-icon">♠</div>
+        Tactical Edge
+      </div>
+      <div class="header-actions">
+        <button class="btn btn-secondary">My Progress</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <span class="chapter-pill">CHAPTER A1</span>
+        <h1>RFI Fundamentals</h1>
+        <p>Build your preflop foundation. Position-based ranges that win.</p>
+        <button class="btn-primary">Continue →</button>
+      </div>
+      <div class="table-visual">
+        <div class="poker-table">
+          <div class="position-dot utg">UTG</div>
+          <div class="position-dot hj">HJ</div>
+          <div class="position-dot co">CO</div>
+          <div class="position-dot btn">BTN</div>
+          <div class="position-dot sb">SB</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="mode-tabs">
+    <button class="mode-tab active">Learn</button>
+    <button class="mode-tab">Drill</button>
+    <button class="mode-tab">Reference</button>
+  </div>
+
+  <main class="container content">
+    <section class="video-section">
+      <div class="video-container">[Video Lesson]</div>
+      <div class="lesson-meta">
+        <span>⏱ 18 min</span>
+        <span>📊 Beginner</span>
+        <span>♠ PreFlop</span>
+      </div>
+    </section>
+
+    <section class="range-module">
+      <div class="range-header">
+        <h3>Range Chart</h3>
+        <div class="range-selector">
+          <button class="position-btn">UTG</button>
+          <button class="position-btn">HJ</button>
+          <button class="position-btn">CO</button>
+          <button class="position-btn active">BTN</button>
+          <button class="position-btn coral">SB</button>
+        </div>
+      </div>
+      <div class="range-grid">
+        <div class="range-cell open">AA</div>
+        <div class="range-cell open">KK</div>
+        <div class="range-cell open">QQ</div>
+        <div class="range-cell open">JJ</div>
+        <div class="range-cell open">TT</div>
+        <div class="range-cell open">99</div>
+        <div class="range-cell open">AKo</div>
+        <div class="range-cell open">AQo</div>
+        <div class="range-cell open">KQs</div>
+        <div class="range-cell maybe">AJo</div>
+        <div class="range-cell maybe">KJs</div>
+        <div class="range-cell fold">86s</div>
+      </div>
+    </section>
+
+    <div class="rules-section">
+      <div class="rule-card">
+        <h4>Rule #1</h4>
+        <p>Tight early, wide late</p>
+      </div>
+      <div class="rule-card">
+        <h4>Rule #2</h4>
+        <p>Same size = unexploitable</p>
+      </div>
+      <div class="rule-card coral">
+        <h4>Rule #3</h4>
+        <p>Know your bottom of range</p>
+      </div>
+    </div>
+
+    <section class="next-lesson">
+      <h3>Up Next: A2 — 3-Bet or Defend</h3>
+      <p>When to attack, when to fold, and when to just call.</p>
+      <button class="btn-primary">Continue to A2</button>
+    </section>
+
+    <div class="instructor">
+      <div class="instructor-avatar"></div>
+      <div class="instructor-info">
+        <h4>John Tokar</h4>
+        <span>Founder · Tactical Edge Poker</span>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="220" viewBox="0 0 820 220" role="img" aria-label="Position widening ladder">
+  <rect width="820" height="220" fill="#0f172a" rx="16" />
+  <text x="32" y="38" fill="#e2e8f0" font-size="20" font-family="Inter, Arial, sans-serif" font-weight="600">Range widens as position improves</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="32" y="78">UTG / EP</text>
+    <rect x="130" y="64" width="140" height="22" rx="6" fill="#38bdf8" />
+
+    <text x="32" y="112">HJ / MP</text>
+    <rect x="130" y="98" width="210" height="22" rx="6" fill="#38bdf8" />
+
+    <text x="32" y="146">CO</text>
+    <rect x="130" y="132" width="300" height="22" rx="6" fill="#38bdf8" />
+
+    <text x="32" y="180">BTN</text>
+    <rect x="130" y="166" width="420" height="22" rx="6" fill="#38bdf8" />
+  </g>
+  <text x="600" y="190" fill="#94a3b8" font-size="12" font-family="Inter, Arial, sans-serif">SB is special: tighter than BTN despite late position</text>
+</svg>

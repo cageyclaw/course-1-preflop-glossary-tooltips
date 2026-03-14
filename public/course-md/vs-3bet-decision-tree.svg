@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360">
+  <rect width="900" height="360" fill="#121624" rx="18" />
+  <text x="40" y="54" fill="#e6e6e6" font-size="22" font-family="Inter, Arial, sans-serif" font-weight="700">Facing a 3-Bet: Decision Tree</text>
+  <text x="40" y="82" fill="#9aa3b2" font-size="14" font-family="Inter, Arial, sans-serif">Filter hands by position, playability, and blocker value.</text>
+
+  <circle cx="160" cy="190" r="44" fill="#1b2132" stroke="#2a3046" />
+  <text x="128" y="196" fill="#e6e6e6" font-size="14" font-family="Inter, Arial, sans-serif">Open</text>
+
+  <path d="M204 190 L360 120" stroke="#4a67ff" stroke-width="3" />
+  <path d="M204 190 L360 190" stroke="#4a67ff" stroke-width="3" />
+  <path d="M204 190 L360 260" stroke="#4a67ff" stroke-width="3" />
+
+  <rect x="360" y="92" width="200" height="56" rx="12" fill="#1b2132" stroke="#2a3046" />
+  <rect x="360" y="162" width="200" height="56" rx="12" fill="#1b2132" stroke="#2a3046" />
+  <rect x="360" y="232" width="200" height="56" rx="12" fill="#1b2132" stroke="#2a3046" />
+
+  <text x="392" y="126" fill="#e6e6e6" font-size="14" font-family="Inter, Arial, sans-serif">Fold</text>
+  <text x="392" y="196" fill="#e6e6e6" font-size="14" font-family="Inter, Arial, sans-serif">Call</text>
+  <text x="392" y="266" fill="#e6e6e6" font-size="14" font-family="Inter, Arial, sans-serif">4-Bet</text>
+
+  <g font-family="Inter, Arial, sans-serif" font-size="12" fill="#cbd2df">
+    <text x="580" y="126">Dominated offsuit</text>
+    <text x="580" y="146">Bad position</text>
+
+    <text x="580" y="196">Suited broadways</text>
+    <text x="580" y="216">Pairs IP</text>
+
+    <text x="580" y="266">Premiums</text>
+    <text x="580" y="286">Blocker bluffs</text>
+  </g>
+</svg>

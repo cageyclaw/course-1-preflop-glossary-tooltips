@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="320" viewBox="0 0 900 320">
+  <rect width="900" height="320" fill="#131826" rx="18" />
+  <text x="40" y="54" fill="#e6e6e6" font-size="22" font-family="Inter, Arial, sans-serif" font-weight="700">Squeeze Risk Lane</text>
+  <text x="40" y="82" fill="#9aa3b2" font-size="14" font-family="Inter, Arial, sans-serif">The more aggressive players behind, the tighter your ISO range.</text>
+
+  <rect x="80" y="150" width="740" height="40" rx="20" fill="#2b3148" />
+  <rect x="80" y="150" width="240" height="40" rx="20" fill="#4a67ff" opacity="0.7" />
+  <rect x="320" y="150" width="240" height="40" rx="20" fill="#6f89ff" opacity="0.6" />
+  <rect x="560" y="150" width="260" height="40" rx="20" fill="#9cb1ff" opacity="0.5" />
+
+  <g font-family="Inter, Arial, sans-serif" font-size="12" fill="#d6d9e0">
+    <text x="90" y="215">Low squeeze</text>
+    <text x="350" y="215">Medium squeeze</text>
+    <text x="620" y="215">High squeeze</text>
+  </g>
+
+  <text x="80" y="260" fill="#9aa3b2" font-size="12" font-family="Inter, Arial, sans-serif">If high squeeze behind, tighten and pick stronger hands.</text>
+</svg>

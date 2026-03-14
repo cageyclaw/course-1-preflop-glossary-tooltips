@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="220" viewBox="0 0 820 220" role="img" aria-label="ISO sizing ladder">
+  <rect width="820" height="220" fill="#0f172a" rx="16" />
+  <text x="32" y="38" fill="#e2e8f0" font-size="20" font-family="Inter, Arial, sans-serif" font-weight="600">ISO sizing ladder (rule of thumb)</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="32" y="82">1 limper</text>
+    <rect x="150" y="66" width="180" height="26" rx="8" fill="#38bdf8" />
+    <text x="350" y="84" fill="#bae6fd">~4bb (3 + 1)</text>
+
+    <text x="32" y="126">2 limpers</text>
+    <rect x="150" y="110" width="230" height="26" rx="8" fill="#38bdf8" />
+    <text x="400" y="128" fill="#bae6fd">~5bb (3 + 2)</text>
+
+    <text x="32" y="170">3 limpers</text>
+    <rect x="150" y="154" width="280" height="26" rx="8" fill="#38bdf8" />
+    <text x="450" y="172" fill="#bae6fd">~6bb (3 + 3)</text>
+  </g>
+  <text x="32" y="204" fill="#94a3b8" font-size="12" font-family="Inter, Arial, sans-serif">Increase more in loose live games with sticky blinds.</text>
+</svg>

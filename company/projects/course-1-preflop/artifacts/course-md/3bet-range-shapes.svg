@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360">
+  <rect width="900" height="360" fill="#121624" rx="18" />
+  <text x="40" y="54" fill="#e6e6e6" font-size="22" font-family="Inter, Arial, sans-serif" font-weight="700">3-Bet Range Shapes</text>
+  <text x="40" y="82" fill="#9aa3b2" font-size="14" font-family="Inter, Arial, sans-serif">Linear vs Polarized: when you expect calls vs folds.</text>
+
+  <g>
+    <rect x="60" y="120" width="350" height="200" rx="16" fill="#1b2132" stroke="#2a3046" />
+    <rect x="490" y="120" width="350" height="200" rx="16" fill="#1b2132" stroke="#2a3046" />
+  </g>
+
+  <text x="90" y="150" fill="#e6e6e6" font-size="16" font-family="Inter, Arial, sans-serif" font-weight="700">Linear (Expect Calls)</text>
+  <text x="520" y="150" fill="#e6e6e6" font-size="16" font-family="Inter, Arial, sans-serif" font-weight="700">Polar (Expect Folds)</text>
+
+  <g font-family="Inter, Arial, sans-serif" font-size="13" fill="#cbd2df">
+    <text x="90" y="180">Premiums</text>
+    <text x="90" y="205">Strong Broadways</text>
+    <text x="90" y="230">Good suited hands</text>
+    <text x="90" y="255">Solid pairs</text>
+    <text x="90" y="280">Tight bluffs</text>
+
+    <text x="520" y="180">Premiums</text>
+    <text x="520" y="205">Bluffs w/ blockers</text>
+    <text x="520" y="230">Suited wheel aces</text>
+    <text x="520" y="255">Select connectors</text>
+    <text x="520" y="280">Trash folded</text>
+  </g>
+
+  <rect x="70" y="298" width="330" height="14" rx="7" fill="#4a67ff" opacity="0.6" />
+  <rect x="500" y="298" width="120" height="14" rx="7" fill="#4a67ff" opacity="0.6" />
+  <rect x="730" y="298" width="100" height="14" rx="7" fill="#7aa2ff" opacity="0.6" />
+</svg>
