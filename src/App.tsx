@@ -1,5 +1,11 @@
-import { useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
+import type { ReactNode } from 'react'
 import { marked } from 'marked'
+import { GlossaryProvider } from './context/GlossaryContext'
+import {
+  GlossaryTerm,
+  renderGlossaryText,
+} from './components/GlossaryTooltip'
 import './App.css'
 import './visuals/visuals.css'
 
@@ -600,6 +606,7 @@ type ProgressEntry = {
   total: number
   submitted: boolean
   completed?: boolean
+  passed?: boolean
   lastUpdated: string
 }
 
@@ -627,7 +634,7 @@ const getProgressSnapshot = (total: number): ProgressSnapshot => {
       (entry) => entry.completed ?? entry.submitted
     ).length
     const drillCompleted = Object.values(parsed.drills || {}).filter(
-      (entry) => entry.submitted
+      (entry) => entry.completed ?? entry.passed ?? entry.submitted
     ).length
     const completed = Math.min(total, quizCompleted + drillCompleted)
     return { completed, total }
@@ -657,6 +664,7 @@ const saveProgress = ({
   total,
   submitted,
   completed,
+  passed,
 }: {
   kind: 'quiz' | 'drill'
   id: string
@@ -664,6 +672,7 @@ const saveProgress = ({
   total: number
   submitted: boolean
   completed?: boolean
+  passed?: boolean
 }) => {
   const stored = localStorage.getItem(progressStorageKey)
   let parsed: ProgressStore = { quizzes: {}, drills: {} }
@@ -679,6 +688,7 @@ const saveProgress = ({
     total,
     submitted,
     completed,
+    passed,
     lastUpdated: new Date().toISOString(),
   }
   const next: ProgressStore = {
@@ -744,7 +754,7 @@ function QuestionSet({
     } finally {
       setHydrated(true)
     }
-  }, [setId, storageKey])
+  }, [setId, storageKey, timedSeconds])
 
   useEffect(() => {
     if (!hydrated) return
@@ -793,7 +803,13 @@ function QuestionSet({
       score,
       total: data.questions.length,
       submitted: isFinal,
-      completed: progressType === 'quiz' ? isFinal : undefined,
+      completed:
+        progressType === 'quiz'
+          ? isFinal
+          : passThreshold
+            ? passed
+            : isFinal,
+      passed: passThreshold ? passed : undefined,
     })
   }, [
     hydrated,
@@ -804,6 +820,8 @@ function QuestionSet({
     score,
     data.questions.length,
     setId,
+    passThreshold,
+    passed,
   ])
 
   useEffect(() => {
@@ -1044,9 +1062,48 @@ function Quiz({ quizId }: { quizId: string }) {
   )
 }
 
+const domNodeToReact = (node: Node, key: string): ReactNode => {
+  if (node.nodeType === Node.TEXT_NODE) {
+    return <span key={key}>{renderGlossaryText(node.textContent ?? '')}</span>
+  }
+
+  if (node.nodeType !== Node.ELEMENT_NODE) {
+    return null
+  }
+
+  const element = node as HTMLElement
+  const tagName = element.tagName.toLowerCase()
+  const props: Record<string, unknown> = { key }
+
+  Array.from(element.attributes).forEach((attr) => {
+    if (attr.name === 'class') props.className = attr.value
+    else if (attr.name === 'style') props.style = attr.value
+    else props[attr.name] = attr.value
+  })
+
+  if (tagName === 'img') {
+    return React.createElement(tagName, props)
+  }
+
+  const children = Array.from(element.childNodes).map((child, index) =>
+    domNodeToReact(child, `${key}-${index}`)
+  )
+
+  return React.createElement(tagName, props, ...children)
+}
+
+const renderMarkdownContent = (html: string) => {
+  if (typeof window === 'undefined') return null
+  const parser = new DOMParser()
+  const doc = parser.parseFromString(html, 'text/html')
+  return Array.from(doc.body.childNodes).map((node, index) =>
+    domNodeToReact(node, `markdown-${index}`)
+  )
+}
+
 function App() {
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [contentHtml, setContentHtml] = useState('<p>Loading…</p>')
+  const [contentHtml, setContentHtml] = useState<ReactNode>(<p>Loading…</p>)
   const totalUnits = chapters.length
   const [progressSnapshot, setProgressSnapshot] = useState(() =>
     getProgressSnapshot(totalUnits)
@@ -1121,12 +1178,14 @@ function App() {
         // GitHub Pages base-path fix: markdown often references /course-md/... (root),
         // but this site is hosted under /course-1-preflop-site/. Rewrite to include BASE_URL.
         html = html.replaceAll('src="/course-md/', `src="${base}course-md/`)
-        if (isMounted) setContentHtml(html)
+        if (isMounted) {
+          setContentHtml(
+            renderMarkdownContent(html) ?? <p>Failed to render chapter.</p>
+          )
+        }
       } catch {
         if (isMounted)
-          setContentHtml(
-            '<p>Failed to load chapter. Check the markdown path.</p>'
-          )
+          setContentHtml(<p>Failed to load chapter. Check the markdown path.</p>)
       }
     }
     load()
@@ -1136,7 +1195,8 @@ function App() {
   }, [current])
 
   return (
-    <div className="app">
+    <GlossaryProvider>
+      <div className="app">
       <aside className="sidebar">
         <div className="brand">
           <img
@@ -1212,6 +1272,23 @@ function App() {
           </div>
         </header>
 
+        <section className="glossary-demo">
+          <div className="glossary-demo-card">
+            <div className="glossary-demo-kicker">Glossary</div>
+            <h2>Quick Hits</h2>
+            <p className="glossary-demo-line">
+              <GlossaryTerm term="RFI">RFI</GlossaryTerm> from{' '}
+              <GlossaryTerm term="UTG">UTG</GlossaryTerm> stays tight, while{' '}
+              <GlossaryTerm term="BTN">BTN</GlossaryTerm> opens wider.
+            </p>
+            <p className="glossary-demo-line">
+              {renderGlossaryText(
+                'Example: {:3-bet} light with {:A5s} in position, then defend vs a {:4-bet}.'
+              )}
+            </p>
+          </div>
+        </section>
+
         <section className="curriculum-timeline">
           <div className="timeline-title">Curriculum Path</div>
           <div className="timeline-items">
@@ -1231,10 +1308,7 @@ function App() {
 
         {current.type === 'markdown' ? (
           <>
-            <article
-              className="markdown"
-              dangerouslySetInnerHTML={{ __html: contentHtml }}
-            />
+            <article className="markdown">{contentHtml}</article>
             <Quiz quizId={current.id} />
           </>
         ) : (
@@ -1267,7 +1341,8 @@ function App() {
           </button>
         </div>
       </main>
-    </div>
+      </div>
+    </GlossaryProvider>
   )
 }
 
